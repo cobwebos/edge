@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright © 2017 www.cobwebos.com and others. All rights reserved.
+
+This program and the accompanying materials are made available under the
+terms of the Eclipse Public License v1.0 which accompanies this distribution,
+and is available at http://www.eclipse.org/legal/epl-v10.html INTERNAL
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.opendaylight.odlparent</groupId>
+    <artifactId>feature-repo-parent</artifactId>
+    <version>3.1.4</version>
+    <relativePath/>
+  </parent>
+
+  <groupId>com.cobwebos</groupId>
+  <artifactId>features-edge</artifactId>
+  <version>0.1.0</version>
+  <packaging>feature</packaging>
+  <!-- <name> formatting is used by autorelease to parse and notify projects on
+       build failure. Please do not modify this unless you have a good reason. -->
+  <name>ODL :: com.cobwebos :: ${project.artifactId}</name>
+
+  <properties>
+    <mdsal.model.version>0.12.4</mdsal.model.version>
+    <mdsal.version>1.7.4</mdsal.version>
+    <restconf.version>1.7.4</restconf.version>
+    <yangtools.version>2.0.6.5</yangtools.version>
+    <configfile.directory>etc/opendaylight/karaf</configfile.directory>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>odl-edge-api</artifactId>
+      <version>${project.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>odl-edge</artifactId>
+      <version>${project.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>odl-edge-rest</artifactId>
+      <version>${project.version}</version>
+      <type>xml</type>
+      <classifier>features</classifier>
+    </dependency>
+  </dependencies>
+</project>
